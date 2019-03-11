@@ -97,7 +97,7 @@ func SwipeTo(ctx context.Context, c *ethclient.Client, fromKey *ecdsa.PrivateKey
 	check(err)
 	err = c.SendTransaction(ctx, signedTx)
 	check(err)
-	log.Printf("Swipping from %s to %s amount: %s (%s fee) [%s]", from.String(), to.String(), newValue, gasPrice, signedTx.Hash().String())
+	log.Printf("Swipping amount: %s (%s fee) [%s]", newValue, gasPrice, signedTx.Hash().String())
 }
 
 func main() {
